@@ -1,11 +1,177 @@
-.navbar {
-  box-shadow: 0 4px 6px -6px #222;
-  padding: 10px 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar .navbar-brand {
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #003C43;
+}
+
+/* Header */
+
+header{
+  background-color: #135D66;
+}
+
+section {
+  background-color: #135D66;
+  margin: 40px;
+}
+
+nav .logo {
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+nav .navbar-brand {
+ color: #77B0AA;
+ font-weight: 700;
+ font-size: 28px;
+}
+
+nav .navbar-brand:hover {
+  color: #77B0AA;
+}
+
+nav .form-control {
+  border: none;
+  width: 100%;
+  padding: 6px 20px;
+  margin: 6px 0;
+  background: none;
+  background-color: #E3FEF7;
+  color: #77B0AA;
+}
+
+
+nav .form-control:hover {
+ color: #000;
+}
+
+nav .fa-search {
+ color: #E3FEF7;
+ background: #77B0AA;
+ border-radius: 80%;
+ padding: 12px 10px 12px 10px;
+ margin: 2px;
+ align-items: center;
+ font-size: 18px;
+}
+
+nav .fa-search:hover {
+  color: #77B0AA;
+  background-color: #E3FEF7;
+  border: #003C43;
+}
+
+nav .button{
+  color: #135D66;
+  background-color: #E3FEF7;
+}
+
+nav .button:hover{
+  background-color: #77B0AA;
+  color: #E3FEF7;
+  border: none;
+}
+
+
+/* Main Section */
+main {
+  width: 100%;
+  max-width: 600px;
+}
+
+.content-left {
+  width: 80%;
+  border-radius: 20px;
+}
+
+.content-left .card {
+  background-color: #135D66;
+  border-radius: 8px;
+  color: #E3FEF7;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* .card-lg {
+  max-width: 400px;
+  margin: 0 auto;
+} */
+
+.card-body .card-title {
   font-size: 1.5em;
-  font-weight: bold;
-  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.1;
 }
 
+.card-body .weapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-body .heading {
+  font-size: 3em;
+  margin-right: 60px;
+}
+
+.card-body .weather-icon {
+  width: 94px;
+  height: 94px;
+}
+
+.card-body .body-3 {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list .items {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.list .items span {
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #E3FEF7;
+}
+
+/* Days-forecast */
+
+.content-left #day-forecast {
+  color: #E3FEF7;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 40px;
+  /* margin-top: 2px;
+  margin-bottom: 2px; */
+}
+
+.icons-wrapper  .weather-icon{
+  margin-right: 8px;
+}
+
+.icons-wrapper span .temperature {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.icons-wrapper p #dates #days {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 10px;
+  text-align: right;
+}

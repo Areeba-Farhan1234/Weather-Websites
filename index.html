@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="bootstrap.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link href="style.css" rel="stylesheet"/>
   <title>Weather Website</title>
 </head>
@@ -11,18 +12,132 @@
   
           <!--Header Section-->
   <header>
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand offset-1">Navbar</a>
+    <nav class="navbar navbar-light">
+      <img class="logo" src="weather-logo.avif" alt="Img-logo" width="60px">
       <div class="container">
-        <div class="d-flex offset-3">
-          <input class="form-control justify-content-center" type="search" placeholder="Search" aria-label="Search">
+        <a class="navbar-brand">WEATHER</a>
+        <div class="d-flex ">
+          <input class="form-control me-2 justify-content-center align-itens-center" type="search" placeholder="Search" aria-label="Search" name="search" id="search" autocomplete="search">
+          <i class="fas fa-search"></i>
         </div>
+
         <div class="d-flex">
-            <button class="btn btn-outline-success justify-content-" type="submit">Search</button>
+          <button class="btn button offset-1" type="submit">Search</button>
         </div>
+
       </div>
     </nav>
   </header>
+             
+
+
+          <!--Main Section-->
+  <main>
+      <div class="content-left">
+        <section>
+            <div class="card">
+              <div class="card-body">
+                  <h2 class="card-title">Now</h2>
+                <div class="weapper">
+                  <div class="heading">25&deg;<sup>c</sup></div>
+                  <img src="images/clouds.png" alt="weather-icon" width="64" height="64" class="weather-icon">
+                </div>
+                <div class="body-3">overcast cloud</div>
+                <hr>
+                <ul class="list">
+                  <li class="items">
+                    <span><i class="fa-solid fa-calendar"></i></span>
+                      <div class="calender">Thrusday 7, 2024</div>
+                  </li>
+                  <li class="items">
+                    <span><i class="fa-solid fa-location-dot"></i></span>
+                    <div class="location">London , UK</div>
+                    <span></span>
+                </li>
+                </ul>
+              </div>
+              </div>
+        </section>
+
+          <div id="day-forecast" class="forecast">
+            5 Days Forecast
+          </div>
+
+          <section>
+            <div class="card">
+                 <ul class="list">
+                  <li class="items">
+                    <div class="icons-wrapper d-flex">
+                      <img src="images/snow.png" alt="weather-icon" width="46" height="46" class="weather-icon">
+                      <span>
+                        <p class="temperature">25</p>
+                      </span>
+                        
+                      <p id="dates">18 July</p>
+
+                      <p id="days">Thrusday</p>
+
+                    </div>
+                  </li>
+                  <li class="items">
+                    <div class="icons-wrapper d-flex">
+                      <img src="images/snow.png" alt="weather-icon" width="46" height="46" class="weather-icon">
+                      <span>
+                        <p class="temperature">25</p>
+                      </span>
+
+                      <p class="dates">18 July</p>
+
+                      <p class="days">Thrusday</p>
+
+                    </div>
+                  </li>
+                  <li class="items">
+                    <div class="icons-wrapper d-flex">
+                      <img src="images/snow.png" alt="weather-icon" width="46" height="46" class="weather-icon">
+                      <span>
+                        <p class="temperature">25</p>
+                      </span>
+
+                      <p class="dates">18 July</p>
+
+                      <p class="days">Thrusday</p>
+
+                    </div>
+                  </li>
+                  <li class="items">
+                    <div class="icons-wrapper d-flex">
+                      <img src="images/snow.png" alt="weather-icon" width="46" height="46" class="weather-icon">
+                      <span>
+                        <p class="temperature">25</p>
+                      </span>
+
+                      <p class="dates">18 July</p>
+
+                      <p class="days">Thrusday</p>
+
+                    </div>
+                  </li>
+                  <li class="items">
+                    <div class="icons-wrapper d-flex">
+                      <img src="images/snow.png" alt="weather-icon" width="46" height="46" class="weather-icon">
+                      <span>
+                        <p class="temperature">25</p>
+                      </span>
+
+                      <p class="dates">18 July</p>
+
+                      <p class="days">Thrusday</p>
+
+                    </div>
+                  </li>
+                    
+                 </ul>
+            </div>
+      
+          </section>
+      </div>
+  </main>
 
 
 
