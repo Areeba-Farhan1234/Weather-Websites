@@ -22,7 +22,7 @@ section {
 }
 
 nav .logo {
-  border-radius: 50%;
+  border-radius: 100%;
   margin-left: 20px;
 }
 
@@ -84,7 +84,7 @@ main {
   width: 100%;
   max-width: 600px;
 }
-
+/* Content Left */
 .content-left {
   width: 80%;
   border-radius: 20px;
@@ -95,14 +95,9 @@ main {
   border-radius: 8px;
   color: #E3FEF7;
   padding: 20px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-/* .card-lg {
-  max-width: 400px;
-  margin: 0 auto;
-} */
 
 .card-body .card-title {
   font-size: 1.5em;
@@ -167,11 +162,74 @@ main {
   font-size: 24px;
   font-weight: 500;
   margin-top: 4px;
+  margin-right: 40px;
 }
 
-.icons-wrapper p #dates #days {
-  font-size: 18px;
+.items .icons-wrapper .dates{
+  font-size: 16px;
   font-weight: 400;
   margin-top: 10px;
-  text-align: right;
+  margin-right: 100px;
+}
+
+.items .icons-wrapper .days{
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.content-right {
+  width: 80%;
+  border-radius: 20px;
+  grid-template-columns: 280px minmax(0, 1fr);
+}
+
+/* Content Right */
+
+.content-right {
+  width: 80%;
+  border-radius: 20px;
+}
+
+.content-right .card{
+  display: flex;
+  background-color: #135D66;
+  border-radius: 8px;
+  color: #E3FEF7;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 800px;
+}
+
+.content-right .card .card-title {
+  font-size: 20px;
+}
+
+.content-right .card .card-sm {
+  background-color: #003C43;
+  border-radius: 8px;
+  color: #E3FEF7;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(33, 33, 33, 0.1);
+  width: 600px;
+}
+.card-sm .air-quality {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-sm .air-quality .air-title {
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+.card-sm .air-quality .good {
+  background-color: #135D66;
+  border: 1px solid #003C43;
+  color: #E3FEF7;
+  margin: 2px;
+  padding: 2px 8px;
+  border-radius: 20px;
 }
