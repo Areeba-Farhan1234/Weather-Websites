@@ -177,13 +177,6 @@ main {
   font-weight: 400;
   margin-top: 10px;
 }
-
-.content-right {
-  width: 80%;
-  border-radius: 20px;
-  grid-template-columns: 280px minmax(0, 1fr);
-}
-
 /* Content Right */
 
 .content-right {
@@ -207,6 +200,7 @@ main {
 }
 
 .content-right .card .card-sm {
+  display: flex;
   background-color: #003C43;
   border-radius: 8px;
   color: #E3FEF7;
@@ -215,6 +209,7 @@ main {
   box-shadow: 0 4px 8px rgba(33, 33, 33, 0.1);
   width: 600px;
 }
+
 .card-sm .air-quality {
   display: flex;
   justify-content: space-between;
@@ -232,4 +227,80 @@ main {
   margin: 2px;
   padding: 2px 8px;
   border-radius: 20px;
+}
+
+.card-sm .air-quality .good:hover {
+  color: #E3FEF7;
+  background-color: #77B0AA;
+  border: 1px solid #003C43;
+}
+
+.card-sm .air {
+  display: flex;
+  margin: 30px 0 10px 0;
+}
+
+.card-sm .air img {
+  margin: 20px 0;
+  margin-right: 5px;
+}
+
+.card-sm .air ul {
+  list-style: none;
+  display: flex;
+}
+
+.card-sm .air ul li {
+ margin: 0 25px;
+}
+
+.card-sm .air ul li .air-scale {
+  font-size: 16px;
+  text-align: center;
+  justify-content: center;
+}
+
+.card-sm .air ul li .air-nmnr {
+  font-size: 2rem;
+}
+
+.card-sm .sunrise-sunset {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-sm .sunrise-sunset .sunset-title {
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+.card-sm .sun-times {
+  display: flex;
+  margin: 20px 0 10px 0;
+}
+
+
+.card-sm .sun-times ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.card-sm  .sun-times ul li {
+ margin: 0 25px;
+}
+
+
+.card-sm .sun-times img {
+  margin: 30px 10px 0 10px;
+}
+
+.card-sm .sun-times ul li .set {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.card-sm .sun-times ul li .time {
+  font-size: 2rem;
 }
