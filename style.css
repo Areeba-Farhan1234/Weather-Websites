@@ -21,37 +21,35 @@ section {
   margin: 40px;
 }
 
-nav .logo {
+.navbar .navbar-brand .logo {
   border-radius: 100%;
   margin-left: 20px;
+  margin-right: 60px;
 }
 
-nav .navbar-brand {
+.navbar .navbar-brand {
  color: #77B0AA;
  font-weight: 700;
  font-size: 28px;
 }
 
-nav .navbar-brand:hover {
-  color: #77B0AA;
-}
-
-nav .form-control {
+nav #navbarContent .form-control {
   border: none;
   width: 100%;
-  padding: 6px 20px;
+  padding: 8px 55px;
   margin: 6px 0;
   background: none;
   background-color: #E3FEF7;
   color: #77B0AA;
+  font-weight: 500;
 }
 
 
-nav .form-control:hover {
- color: #000;
+nav #navbarContent  .form-control:hover {
+  background-color: #fff;
+  color: #77B0AA;
 }
-
-nav .fa-search {
+nav #navbarContent .fa-search {
  color: #E3FEF7;
  background: #77B0AA;
  border-radius: 80%;
@@ -61,28 +59,59 @@ nav .fa-search {
  font-size: 18px;
 }
 
-nav .fa-search:hover {
+nav #navbarContent .fa-search:hover {
   color: #77B0AA;
   background-color: #E3FEF7;
   border: #003C43;
+  transition: 1s;
+  font-size: 19px;
 }
 
-nav .button{
+nav #navbarContent .btn{
   color: #135D66;
   background-color: #E3FEF7;
+  padding: 8px 16px;
 }
 
-nav .button:hover{
+nav #navbarContent .btn:hover{
   background-color: #77B0AA;
   color: #E3FEF7;
   border: none;
 }
 
 
+
+@media (max-width: 1420px) {
+  nav #navbarContent .btn  {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 1210px) {
+  nav #navbarContent .btn {
+    margin-right: 25px;
+  }
+}
+
+
+@media (max-width: 999px) {
+  .navbar .navbar-brand .logo {
+    margin-left: 2rem;
+    margin-right: 3rem;
+  }
+  
+  nav #navbarContent .form-control {
+    width: 50%;
+    padding: 8px 25px;
+  }
+}
+
+
+
 /* Main Section */
 main {
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
 }
 /* Content Left */
 .content-left {
@@ -192,7 +221,7 @@ main {
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 800px;
+  width: 1340px;
 }
 
 .content-right .card .card-title {
@@ -303,4 +332,61 @@ main {
 
 .card-sm .sun-times ul li .time {
   font-size: 2rem;
+}
+
+.card-sm .updates .updates-title {
+  font-size: 16px;
+  text-align: start;
+  margin-bottom: 14px;
+}
+
+#small-cards .updates-value img {
+  margin: 30px 10px 0 10px;
+}
+
+#small-cards .updates-value .updates-nmr {
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+
+.content-right #today-at{
+  color: #E3FEF7;
+  background: #003C43;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 40px;
+}
+
+.content-right #days{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+.content-right #days .card-sm ul {
+  list-style: none;
+  margin: 0;
+}
+
+.content-right #days .card-sm ul li {
+  font-weight: 600;
+  margin-left: 18px;
+  margin-top: 10px;
+}
+
+.content-right #days .times-days {
+  padding-left: 20px;
+}
+
+
+.content-right #days .card-sm ul  img {
+  margin-right: 40px;
+  margin-left: 2px;
+
+}
+
+.content-right #days .cel-days {
+  padding-left: 30px;
 }
