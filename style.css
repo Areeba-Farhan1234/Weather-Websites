@@ -41,13 +41,15 @@ nav #navbarContent .form-control {
   background: none;
   background-color: #E3FEF7;
   color: #77B0AA;
-  font-weight: 500;
+  font-weight: 600;
+  align-items: center;
 }
 
 
 nav #navbarContent  .form-control:hover {
   background-color: #fff;
-  color: #77B0AA;
+  color: #000;
+  font-weight: 500;
 }
 nav #navbarContent .fa-search {
  color: #E3FEF7;
@@ -111,7 +113,7 @@ nav #navbarContent .btn:hover{
 /* Main Section */
 main {
   width: 100%;
-  max-width: 1000px;
+  /* max-width: 1000px; */
 }
 /* Content Left */
 .content-left {
@@ -361,7 +363,7 @@ main {
 
 .content-right #days{
   margin-top: 20px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   margin-bottom: 0;
 }
 
@@ -372,11 +374,11 @@ main {
 
 .content-right #days .card-sm ul li {
   font-weight: 600;
-  margin-left: 18px;
+  /* margin-left: 18px; */
   margin-top: 10px;
 }
 
-.content-right #days .times-days {
+/* .content-right #days .times-days {
   padding-left: 20px;
 }
 
@@ -389,4 +391,4 @@ main {
 
 .content-right #days .cel-days {
   padding-left: 30px;
-}
+} */
