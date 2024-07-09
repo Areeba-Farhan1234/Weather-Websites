@@ -223,7 +223,7 @@ main {
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 1340px;
+  width: 100%;
 }
 
 .content-right .card .card-title {
@@ -391,4 +391,11 @@ main {
 
 .content-right #days .cel-days {
   padding-left: 30px;
+} */
+
+/* 
+@media (max-width: 1785px) {
+  .content-right .card{
+    width: 80%;
+  }
 } */
