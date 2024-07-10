@@ -11,14 +11,14 @@ body {
 }
 
 /* Header */
-
-header{
+header {
   background-color: #135D66;
 }
 
 section {
   background-color: #135D66;
   margin: 40px;
+  border-radius: 50px;
 }
 
 .navbar .navbar-brand .logo {
@@ -28,9 +28,9 @@ section {
 }
 
 .navbar .navbar-brand {
- color: #77B0AA;
- font-weight: 700;
- font-size: 28px;
+  color: #77B0AA;
+  font-weight: 700;
+  font-size: 28px;
 }
 
 nav #navbarContent .form-control {
@@ -45,20 +45,20 @@ nav #navbarContent .form-control {
   align-items: center;
 }
 
-
-nav #navbarContent  .form-control:hover {
+nav #navbarContent .form-control:hover {
   background-color: #fff;
   color: #000;
   font-weight: 500;
 }
+
 nav #navbarContent .fa-search {
- color: #E3FEF7;
- background: #77B0AA;
- border-radius: 80%;
- padding: 12px 10px 12px 10px;
- margin: 2px;
- align-items: center;
- font-size: 18px;
+  color: #E3FEF7;
+  background: #77B0AA;
+  border-radius: 80%;
+  padding: 12px 10px 12px 10px;
+  margin: 2px;
+  align-items: center;
+  font-size: 18px;
 }
 
 nav #navbarContent .fa-search:hover {
@@ -69,22 +69,20 @@ nav #navbarContent .fa-search:hover {
   font-size: 19px;
 }
 
-nav #navbarContent .btn{
+nav #navbarContent .btn {
   color: #135D66;
   background-color: #E3FEF7;
   padding: 8px 16px;
 }
 
-nav #navbarContent .btn:hover{
+nav #navbarContent .btn:hover {
   background-color: #77B0AA;
   color: #E3FEF7;
   border: none;
 }
 
-
-
 @media (max-width: 1420px) {
-  nav #navbarContent .btn  {
+  nav #navbarContent .btn {
     margin-right: 20px;
   }
 }
@@ -95,27 +93,38 @@ nav #navbarContent .btn:hover{
   }
 }
 
-
 @media (max-width: 999px) {
   .navbar .navbar-brand .logo {
     margin-left: 2rem;
     margin-right: 3rem;
   }
-  
+
   nav #navbarContent .form-control {
     width: 50%;
     padding: 8px 25px;
   }
 }
 
+@media (max-width: 768px) {
+  section {
+    margin: 20px;
+    border-radius: 30px;
+  }
 
+  nav #navbarContent .form-control {
+    width: 70%;
+  }
+
+  nav #navbarContent .btn {
+    padding: 6px 12px;
+  }
+}
 
 /* Main Section */
 main {
   width: 100%;
-  /* max-width: 1000px; */
 }
-/* Content Left */
+
 .content-left {
   width: 80%;
   border-radius: 20px;
@@ -125,9 +134,9 @@ main {
   background-color: #135D66;
   border-radius: 8px;
   color: #E3FEF7;
-  padding: 20px;
-  /* margin-bottom: 20px; */
+  padding: 20px 10px 10px 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .card-body .card-title {
@@ -140,11 +149,12 @@ main {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 .card-body .heading {
   font-size: 3em;
-  margin-right: 60px;
+  margin-right: 80px;
 }
 
 .card-body .weather-icon {
@@ -175,47 +185,47 @@ main {
 }
 
 /* Days-forecast */
-
 .content-left #day-forecast {
   color: #E3FEF7;
   font-size: 18px;
   font-weight: 700;
   margin-left: 40px;
-  /* margin-top: 2px;
-  margin-bottom: 2px; */
 }
 
-.icons-wrapper  .weather-icon{
-  margin-right: 8px;
+.icons-wrapper .weather-icon {
+  margin-top: 4px;
+  margin-right: 30px;
 }
 
 .icons-wrapper span .temperature {
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: 500;
-  margin-top: 4px;
+  margin-top: 2px;
   margin-right: 40px;
 }
 
-.items .icons-wrapper .dates{
-  font-size: 16px;
+.items .icons-wrapper .dates {
+  font-size: 20px;
   font-weight: 400;
   margin-top: 10px;
-  margin-right: 100px;
+  margin-left: 20px;
+  margin-right: 60px;
 }
 
-.items .icons-wrapper .days{
-  font-size: 16px;
+.items .icons-wrapper .days {
+  font-size: 20px;
   font-weight: 400;
   margin-top: 10px;
+  margin-left: 20px;
 }
+
 /* Content Right */
-
 .content-right {
   width: 80%;
   border-radius: 20px;
 }
 
-.content-right .card{
+.content-right .card {
   display: flex;
   background-color: #135D66;
   border-radius: 8px;
@@ -236,9 +246,8 @@ main {
   border-radius: 8px;
   color: #E3FEF7;
   padding: 10px;
-  margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(33, 33, 33, 0.1);
-  width: 600px;
+  width: 100%;
 }
 
 .card-sm .air-quality {
@@ -279,10 +288,11 @@ main {
 .card-sm .air ul {
   list-style: none;
   display: flex;
+  padding: 0;
 }
 
 .card-sm .air ul li {
- margin: 0 25px;
+  margin: 0 25px;
 }
 
 .card-sm .air ul li .air-scale {
@@ -310,17 +320,15 @@ main {
   margin: 20px 0 10px 0;
 }
 
-
 .card-sm .sun-times ul {
   list-style: none;
   display: flex;
   padding: 0;
 }
 
-.card-sm  .sun-times ul li {
- margin: 0 25px;
+.card-sm .sun-times ul li {
+  margin: 0 25px;
 }
-
 
 .card-sm .sun-times img {
   margin: 30px 10px 0 10px;
@@ -342,18 +350,19 @@ main {
   margin-bottom: 14px;
 }
 
-#small-cards .updates-value img {
+#small-cards .updates-value span #icons {
   margin: 30px 10px 0 10px;
+  width: 36px;
+  font-weight: 800;
 }
 
 #small-cards .updates-value .updates-nmr {
-  font-size: 2rem;
-  margin-top: 30px;
-  margin-left: 40px;
+  font-size: 1.7rem;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
-
-.content-right #today-at{
+.content-right #today-at {
   color: #E3FEF7;
   background: #003C43;
   font-size: 18px;
@@ -361,9 +370,8 @@ main {
   margin-left: 40px;
 }
 
-.content-right #days{
+.content-right #days {
   margin-top: 20px;
-  /* margin-left: 20px; */
   margin-bottom: 0;
 }
 
@@ -374,28 +382,89 @@ main {
 
 .content-right #days .card-sm ul li {
   font-weight: 600;
-  /* margin-left: 18px; */
   margin-top: 10px;
 }
 
-/* .content-right #days .times-days {
-  padding-left: 20px;
-}
-
-
-.content-right #days .card-sm ul  img {
-  margin-right: 40px;
-  margin-left: 2px;
-
-}
-
-.content-right #days .cel-days {
-  padding-left: 30px;
-} */
-
-/* 
-@media (max-width: 1785px) {
-  .content-right .card{
-    width: 80%;
+@media (max-width: 1840px) {
+  .content-right .card {
+    width: 1320px;
   }
-} */
+}
+
+@media (max-width: 768px) {
+  .content-left, .content-right {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .content-left .card, .content-right .card {
+    padding: 10px;
+  }
+
+  .card-body .heading {
+    font-size: 2em;
+    margin-right: 20px;
+  }
+
+  .card-body .weather-icon {
+    width: 74px;
+    height: 74px;
+  }
+
+  .icons-wrapper span .temperature {
+    font-size: 1.5rem;
+    margin-right: 20px;
+  }
+
+  .items .icons-wrapper .dates, .items .icons-wrapper .days {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .content-right .card .card-sm {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card-sm .air ul, .card-sm .sun-times ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-sm .air ul li, .card-sm .sun-times ul li {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .navbar-brand .logo {
+    margin: 0;
+  }
+
+  nav #navbarContent .form-control {
+    width: 100%;
+    padding: 8px 15px;
+  }
+
+  .card-body .heading {
+    font-size: 1.5em;
+  }
+
+  .card-body .weather-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .icons-wrapper span .temperature {
+    font-size: 1.2rem;
+  }
+
+  .items .icons-wrapper .dates, .items .icons-wrapper .days {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .content-right .card .card-sm {
+    padding: 10px;
+  }
+}
