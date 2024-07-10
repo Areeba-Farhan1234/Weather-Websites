@@ -151,33 +151,35 @@
               <h2 class="card-title">Today's Highlights</h2>
       
 
-              <div id="small-cards" class="d-flex flex-wrap justify-content-between">
+              <div id="small-cards" class="d-flex flex-wrap flex-lg-nowrap justify-content-between">
                 <div class="card card-sm mb-3" style="width: 580px">
                   <div class="card-body">
-                    <div class="air-quality">
-                      <h4 class="air-title">Air Quality Index</h4>
-                      <button class="good">Good</button>  
-                    </div>
-                    <div class="air d-flex">
-                      <img src="images/wind.png" alt="air" width="46px" height="46px"/>
-                      <ul class="ms-3">
-                        <li>
-                          <p class="air-scale">SO<sub>2</sub></p>
-                          <h3 class="air-nmnr">3.90</h3>
-                        </li>
-                        <li>
-                          <p class="air-scale">SO<sub>2</sub></p>
-                          <h3 class="air-nmnr">3.90</h3>
-                        </li>
-                        <li>
-                          <p class="air-scale">SO<sub>2</sub></p>
-                          <h3 class="air-nmnr">3.90</h3>
-                        </li>
-                        <li>
-                          <p class="air-scale">SO<sub>2</sub></p>
-                          <h3 class="air-nmnr">3.90</h3>
-                        </li>
-                      </ul>
+                    <div class="d-flex flex-column flex-sm-column">
+                      <div class="air-quality">
+                        <h4 class="air-title">Air Quality Index</h4>
+                        <button class="good">Good</button>  
+                      </div>
+                      <div class="air d-flex flex-column flex-sm-row">
+                        <img src="images/wind.png" alt="air" width="46px" height="46px" class="justify-content-center"/>
+                        <ul class="ms-3">
+                          <li>
+                            <p class="air-scale">SO<sub>2</sub></p>
+                            <h3 class="air-nmnr">3.90</h3>
+                          </li>
+                          <li>
+                            <p class="air-scale">SO<sub>2</sub></p>
+                            <h3 class="air-nmnr">3.90</h3>
+                          </li>
+                          <li>
+                            <p class="air-scale">SO<sub>2</sub></p>
+                            <h3 class="air-nmnr">3.90</h3>
+                          </li>
+                          <li>
+                            <p class="air-scale">SO<sub>2</sub></p>
+                            <h3 class="air-nmnr">3.90</h3>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -187,7 +189,7 @@
                     <div class="sunrise-sunset">
                       <h3 class="sunset-title">Sunrise & Sunset</h3>
                     </div>
-                    <div class="sun-times d-flex align-items-center">
+                    <div class="sun-times d-flex align-items-center flex-column flex-sm-row">
                       <ul class="list-unstyled me-3">
                         <li class="d-flex align-items-center">
                           <img src="images/sun .png" alt="sun" width="56px" height="56px" class="me-2">
@@ -270,7 +272,7 @@
           Today at
         </div>
 
-        <div class="d-flex flex-nowrap justify-content-between" id="days">
+        <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center" id="days">
           <div class="card card-sm align-items-center justify-content-between p-0 mx-2" style="width: 150px; height: 200px;">
             <div class="card-body">
               <ul class="list-unstyled text-center">
