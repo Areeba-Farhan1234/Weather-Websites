@@ -134,7 +134,7 @@ main {
   background-color: #135D66;
   border-radius: 8px;
   color: #E3FEF7;
-  padding: 20px 10px 10px 30px;
+  padding: 20px 20px 10px 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
@@ -461,5 +461,79 @@ main {
 
   .content-right .card .card-sm {
     padding: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+
+  .content-left .card {
+    padding: 20px;
+  }
+
+
+  .navbar .navbar-brand .logo {
+    margin: 0;
+  }
+
+  nav #navbarContent .form-control {
+    width: 80%;
+    padding: 6px 12px;
+  }
+
+  .card-body .heading {
+    margin-top: 4px;
+    font-size: 1.5em;
+  }
+
+  .card-body .weather-icon {
+    width: 64px;
+    height: 64px;
+    margin-left: 20px;
+  }
+
+  .icons-wrapper span .temperature {
+    margin-top: 6px;
+    font-size: 1.2rem;
+  }
+
+  .items .icons-wrapper .dates {
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+
+  .items .icons-wrapper .dates, .items .icons-wrapper .days {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .content-right .card .card-sm {
+    padding: 10px;
+  }
+  
+  .icons-wrapper .weather-icon {
+    margin-right: 20px;
+  }
+
+  .content-right .card .card-sm {
+    width: 300px;
+    height: 200px;
+  }
+
+  .card-sm .air-quality .air-title {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  .card-sm .air-quality .good {
+    margin: 0;
+  }
+
+  .card-sm .air {
+    margin: 20px 0 5px 0;
+  }
+
+  .card-sm .air img {
+    margin: 10px 0;
+    margin-right: 5px;
   }
 }
