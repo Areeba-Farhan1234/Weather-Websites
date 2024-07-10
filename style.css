@@ -385,11 +385,6 @@ main {
   margin-top: 10px;
 }
 
-@media (max-width: 1840px) {
-  .content-right .card {
-    width: 1320px;
-  }
-}
 
 @media (max-width: 768px) {
   .content-left, .content-right {
@@ -436,7 +431,7 @@ main {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 476px) {
   .navbar .navbar-brand .logo {
     margin: 0;
   }
