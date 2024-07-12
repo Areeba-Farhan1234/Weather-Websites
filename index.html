@@ -71,7 +71,7 @@
 
           <section>
             <div class="card">
-                 <ul class="list day-forecast">
+                 <ul class="list" id="forecast-day">
                   <li class="items">
                     <div class="icons-wrapper d-flex">
                       <img src="images/snow.png" alt="weather-icon" width="46" height="46" class="weather-icon">
@@ -157,7 +157,7 @@
                     <div class="d-flex flex-column flex-sm-column">
                       <div class="air-quality">
                         <h4 class="air-title">Air Quality Index</h4>
-                        <button class="good">Good</button>  
+                        <button class="good api-1">Good</button>  
                       </div>
                       <div class="air d-flex flex-column flex-sm-row">
                         <img src="images/wind.png" alt="air" width="46px" height="46px" class="justify-content-center"/>
@@ -217,7 +217,7 @@
                 <div class="card card-sm mb-3" style="width: 260px;">
                   <div class="card-body">
                     <div class="updates">
-                      <h3 class="updates-title">Humidity</h3>
+                      <h3 class="updates-title" id="HumidityVal">Humidity</h3>
                     </div>
                     <div class="updates-value d-flex align-items-center">
                       <span><i class="fa-solid fa-droplet" id="icons"></i></span>
@@ -229,7 +229,7 @@
                 <div class="card card-sm mb-3" style="width: 260px;">
                   <div class="card-body">
                     <div class="updates">
-                      <h3 class="updates-title">Pressure</h3>
+                      <h3 class="updates-title" id="PressureVal">Pressure</h3>
                     </div>
                     <div class="updates-value d-flex align-items-center">
                       <span><i class="fas fa-tachometer-alt" id="icons"></i></span>
@@ -241,7 +241,7 @@
                 <div class="card card-sm mb-3" style="width: 260px;">
                   <div class="card-body">
                     <div class="updates">
-                      <h3 class="updates-title">Visibility</h3>
+                      <h3 class="updates-title" id="VisibilityVal">Visibility</h3>
                     </div>
                     <div class="updates-value d-flex align-items-center">
                         <span><i class="fa-solid fa-eye" id="icons"></i></span> 
@@ -253,7 +253,7 @@
                 <div class="card card-sm mb-3" style="width: 260px;">
                   <div class="card-body">
                     <div class="updates">
-                      <h3 class="updates-title">Feels Like</h3>
+                      <h3 class="updates-title" id="FeelsVal">Feels Like</h3>
                     </div>
                     <div class="updates-value d-flex align-items-center">
                         <span><i class="fa-solid fa-temperature-high" id="icons"></i></span>
@@ -273,14 +273,14 @@
         </div>
 
         <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center" id="days">
-          <div class="card card-sm align-items-center justify-content-between p-0 mx-2" style="width: 150px; height: 200px;">
+          <div class="card card-sm align-items-center justify-content-between p-0 mx-2" id="card-box" style="width: 150px; height: 200px;">
             <div class="card-body">
               <ul class="list-unstyled text-center">
                 <li class="times-days">9 PM</li>
                 <li class="img-days">
                   <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
                 </li>
-                <li class="cel-days">5</li>
+                <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
@@ -292,7 +292,7 @@
                 <li class="img-days">
                   <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
                 </li>
-                <li class="cel-days">5</li>
+                <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
@@ -304,7 +304,7 @@
                 <li class="img-days">
                   <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
                 </li>
-                <li class="cel-days">5</li>
+                <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
@@ -316,7 +316,7 @@
                 <li class="img-days">
                   <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
                 </li>
-                <li class="cel-days">5</li>
+                <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
@@ -328,7 +328,7 @@
                 <li class="img-days">
                   <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
                 </li>
-                <li class="cel-days">5</li>
+                <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
@@ -340,7 +340,7 @@
                 <li class="img-days">
                   <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
                 </li>
-                <li class="cel-days">5</li>
+                <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
@@ -352,7 +352,7 @@
                 <li class="img-days">
                   <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
                 </li>
-                <li class="cel-days">5</li>
+                <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
@@ -364,11 +364,11 @@
                 <li class="img-days">
                   <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
                 </li>
-                <li class="cel-days">5</li>
+                <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
-    
+          
         </div>
       </div>
 
