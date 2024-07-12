@@ -373,6 +373,8 @@ main {
 .content-right #days {
   margin-top: 20px;
   margin-bottom: 0;
+  margin-right: 25px;
+  margin-left: 25px;
 }
 
 .content-right #days .card-sm ul {
@@ -390,18 +392,46 @@ main {
   #small-cards  {
     flex-wrap: nowrap;
     justify-content: space-between;
-    /* margin-left: 20px; */
   }
   .content-right .card .card-sm{
-    width: 560px;
     margin-left: 20px;
   }
+
+  .content-right .card .card-sm #air {
+    margin-left: 20px;
+  }
+
   .card-sm .sun-times ul li {
     margin: 0 15px;
   }
+
+  .card-sm .air ul li {
+    margin: 0 20px;
+  }
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1520px) {
+  .card-sm .sun-times ul li {
+    margin: 0 10px;
+  }
+
+  .card-sm .air ul li {
+    margin: 0 15px;
+  }
+
+  .card-sm .sun-times ul li .time {
+    font-size: 1.3rem;
+  }
+
+  .card-sm .air ul li .air-nmnr {
+    font-size: 1.5rem;
+  }
+  .content-left .card {
+    padding: 20px 30px 10px 20px;
+  }
+}
+
+@media (max-width: 1276px) {
   .content-right #days {
     flex-wrap: wrap;
   }
@@ -411,8 +441,59 @@ main {
     margin-top: 20px;
     margin-left: 10px;
   }
+
+  .card-sm .air ul li {
+    margin: 0 10px;
+  }
+
+  .card-sm .sun-times ul li {
+    margin: 0 8px;
+  }
+
+  .card-sm .sun-times ul li .time {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .content-left .card {
+    padding: 20px 30px 10px 20px;
+  }
+
 }
 
+@media (max-width: 1155px) {
+  .card-sm .air ul li {
+    margin: 0 6px;
+  }
+  .card-sm .sun-times ul li .time {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+
+@media (max-width: 998px) {
+  .card-sm .sun-times ul li {
+    margin: 0 10px;
+  }
+
+  .card-sm .air ul li {
+    margin: 0 15px;
+  }
+
+  .card-sm .sun-times ul li .time {
+    font-size: 1.3rem;
+  }
+
+  .card-sm .air ul li .air-nmnr {
+    font-size: 1.5rem;
+  }
+
+  /* .content-right .card .card-sm {
+    margin-left: 0;
+  } */
+
+}
 
 @media (max-width: 768px) {
   
@@ -427,6 +508,19 @@ main {
   .content-left .card, .content-right .card {
     padding: 20px;
   } */
+  
+  .content-left .card {
+    padding: 10px 20px 10px 30px;
+  }
+
+  .content-left .card #forecast {
+    padding: 20px 30px 20px 40px;
+  }
+
+  .icons-wrapper .weather-icon {
+    margin-top: 4px;
+    margin-right: 20px;
+  }
 
 
   .card-sm .air ul li {
@@ -450,11 +544,15 @@ main {
 
   .icons-wrapper span .temperature {
     font-size: 1.5rem;
-    margin-right: 20px;
+    margin-right: 15px;
   }
 
   .items .icons-wrapper .dates, .items .icons-wrapper .days {
     font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .items .icons-wrapper .dates{
     margin-right: 20px;
   }
 
@@ -471,13 +569,21 @@ main {
   .card-sm .air ul li, .card-sm .sun-times ul li {
     margin: 10px 0;
   }
-
   .card .list .items {
     margin-left: 20px;
   }
+
+  #small-cards {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .content-right .card {
+    padding: 20px 40px 20px 20px;
+  }
 }
 
-@media (max-width: 476px) {
+@media (max-width: 496px) {
   .navbar .navbar-brand .logo {
     margin: 0;
   }
@@ -526,17 +632,25 @@ main {
   }
 
   .content-left .card, .content-right .card {
-    padding: 20px;
+    padding: 20px 30px 20px 10px;
   }
 
   .card-sm .sun-times ul li .set {
     font-size: 16px;
   }
 
+  section {
+    margin: 20px;
+  }
+
+
+  .content-right .card {
+    padding: 10px 20px 10px 10px;
+  }
 
 }
 
-@media (max-width: 346px) {
+@media (max-width: 376px) {
 
   .content-left .card {
     padding: 5px;
@@ -565,17 +679,22 @@ main {
 
   .icons-wrapper span .temperature {
     margin-top: 6px;
+    margin-right: 5px;
     font-size: 1.2rem;
   }
 
   .items .icons-wrapper .dates {
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+
+  .items .icons-wrapper .days {
     margin-left: 10px;
   }
 
   .items .icons-wrapper .dates, .items .icons-wrapper .days {
-    font-size: 14px;
-    margin-right: 10px;
+    font-size: 12px;
+    margin-right: 5px;
   }
 
   .content-right .card .card-sm {
@@ -583,7 +702,7 @@ main {
   }
   
   .icons-wrapper .weather-icon {
-    margin-right: 20px;
+    margin-right: 12px;
   }
 
   .content-right .card .card-sm {
@@ -619,6 +738,14 @@ main {
 
   .content-right .card {
     padding: 10px;
+  }
+
+  #small-cards {
+    margin-left: 0px;
+  }
+
+  .card .list .items {
+    margin-left: 4px;
   }
  
 }
