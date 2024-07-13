@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="bootstrap.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link href="style.css" rel="stylesheet"/>
-  <title>Weather Website</title>
-</head>
-<body>
-  
-          <!--Header Section-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>Weather Website</title>
+  </head>
+  <body>
+    <!--Header Section-->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light p-0">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img class="logo" src="images/weather-logo.png" alt="Img-logo" width="60px"> 
-                WEATHER
+            <img
+              class="logo"
+              src="images/weather-logo.png"
+              alt="Img-logo"
+              width="60px"
+            />
+            WEATHER
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarContent">
-            <form class="d-flex align-items-center justify-content-center offset-xl-3 offset-lg-2">
-              <input class="form-control me-2" type="search" placeholder="Search" name="search" id="search" autocomplete="search">
-              <i class="fas fa-search" id="fa-search"></i> 
+            <form
+              class="d-flex align-items-center justify-content-center offset-xl-3 offset-lg-2"
+            >
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                name="search"
+                id="search"
+                autocomplete="search"
+              />
+              <i class="fas fa-search" id="fa-search"></i>
             </form>
             <div class="d-flex offset-xl-4 offset-lg-3 justify-content-center">
               <button class="btn" id="searchBtn" type="submit">Search</button>
@@ -34,133 +57,166 @@
         </div>
       </nav>
     </header>
-             
 
-
-          <!-- Main Section -->
-  <main class="d-md-flex">
+    <!-- Main Section -->
+    <main class="d-md-flex">
       <div class="content-left">
         <section>
-            <div class="card">
-              <div class="card-body p-0">
-                  <h2 class="card-title">Now</h2>
-                <div class="weapper">
-                  <div class="heading">25&deg;<sup>c</sup></div>
-                  <img src="images/clouds.png" alt="weather-icon" width="74" height="74" class="weather-icon">
-                </div>
-                <div class="body-3">overcast cloud</div>
-                <hr>
-                <ul class="list">
-                  <li class="items">
-                    <span><i class="fa-solid fa-calendar"></i></span>
-                      <div class="calender">Thrusday 7, 2024</div>
-                  </li>
-                  <li class="items">
-                    <span><i class="fa-solid fa-location-dot"></i></span>
-                    <div class="location" id="location">London , UK</div>
-                    <span></span>
+          <div class="card">
+            <div class="card-body p-0">
+              <h2 class="card-title">Now</h2>
+              <div class="weapper">
+                <div class="heading">25&deg;<sup>c</sup></div>
+                <img
+                  src="images/clouds.png"
+                  alt="weather-icon"
+                  width="74"
+                  height="74"
+                  class="weather-icon"
+                />
+              </div>
+              <div class="body-3">overcast cloud</div>
+              <hr />
+              <ul class="list">
+                <li class="items">
+                  <span><i class="fa-solid fa-calendar"></i></span>
+                  <div class="calender">Thrusday 7, 2024</div>
                 </li>
-                </ul>
-              </div>
-              </div>
+                <li class="items">
+                  <span><i class="fa-solid fa-location-dot"></i></span>
+                  <div class="location" id="location">London , UK</div>
+                  <span></span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
 
-          <div id="day-forecast" class="forecast">
-            5 Days Forecast
+        <div id="day-forecast" class="forecast">5 Days Forecast</div>
+
+        <section>
+          <div class="card" id="forecast ">
+            <ul class="list" id="forecast-day">
+              <li class="items">
+                <div class="icons-wrapper d-flex">
+                  <img
+                    src="images/snow.png"
+                    alt="weather-icon"
+                    width="46"
+                    height="46"
+                    class="weather-icon"
+                  />
+                  <span>
+                    <p class="temperature">25</p>
+                  </span>
+
+                  <p class="dates">18 July</p>
+
+                  <p class="days">Thrusday</p>
+                </div>
+              </li>
+              <li class="items">
+                <div class="icons-wrapper d-flex">
+                  <img
+                    src="images/snow.png"
+                    alt="weather-icon"
+                    width="46"
+                    height="46"
+                    class="weather-icon"
+                  />
+                  <span>
+                    <p class="temperature">25</p>
+                  </span>
+
+                  <p class="dates">18 July</p>
+
+                  <p class="days">Thrusday</p>
+                </div>
+              </li>
+              <li class="items">
+                <div class="icons-wrapper d-flex">
+                  <img
+                    src="images/snow.png"
+                    alt="weather-icon"
+                    width="46"
+                    height="46"
+                    class="weather-icon"
+                  />
+                  <span>
+                    <p class="temperature">25</p>
+                  </span>
+
+                  <p class="dates">18 July</p>
+
+                  <p class="days">Thrusday</p>
+                </div>
+              </li>
+              <li class="items">
+                <div class="icons-wrapper d-flex">
+                  <img
+                    src="images/snow.png"
+                    alt="weather-icon"
+                    width="46"
+                    height="46"
+                    class="weather-icon"
+                  />
+                  <span>
+                    <p class="temperature">25</p>
+                  </span>
+
+                  <p class="dates">18 July</p>
+
+                  <p class="days">Thrusday</p>
+                </div>
+              </li>
+              <li class="items">
+                <div class="icons-wrapper d-flex">
+                  <img
+                    src="images/snow.png"
+                    alt="weather-icon"
+                    width="46"
+                    height="46"
+                    class="weather-icon"
+                  />
+                  <span>
+                    <p class="temperature">25</p>
+                  </span>
+
+                  <p class="dates">18 July</p>
+
+                  <p class="days">Thrusday</p>
+                </div>
+              </li>
+            </ul>
           </div>
-
-          <section>
-            <div class="card" id="forecast ">
-                 <ul class="list" id="forecast-day">
-                  <li class="items">
-                    <div class="icons-wrapper d-flex">
-                      <img src="images/snow.png" alt="weather-icon" width="46" height="46" class="weather-icon">
-                      <span>
-                        <p class="temperature">25</p>
-                      </span>
-                        
-                      <p class="dates">18 July</p>
-
-                      <p class="days">Thrusday</p>
-
-                    </div>
-                  </li>
-                  <li class="items">
-                    <div class="icons-wrapper d-flex">
-                      <img src="images/snow.png" alt="weather-icon" width="46" height="46" class="weather-icon">
-                      <span>
-                        <p class="temperature">25</p>
-                      </span>
-
-                      <p class="dates">18 July</p>
-
-                      <p class="days">Thrusday</p>
-
-                    </div>
-                  </li>
-                  <li class="items">
-                    <div class="icons-wrapper d-flex">
-                      <img src="images/snow.png" alt="weather-icon" width="46" height="46" class="weather-icon">
-                      <span>
-                        <p class="temperature">25</p>
-                      </span>
-
-                      <p class="dates">18 July</p>
-
-                      <p class="days">Thrusday</p>
-
-                    </div>
-                  </li>
-                  <li class="items">
-                    <div class="icons-wrapper d-flex">
-                      <img src="images/snow.png" alt="weather-icon" width="46" height="46" class="weather-icon">
-                      <span>
-                        <p class="temperature">25</p>
-                      </span>
-
-                      <p class="dates">18 July</p>
-
-                      <p class="days">Thrusday</p>
-
-                    </div>
-                  </li>
-                  <li class="items">
-                    <div class="icons-wrapper d-flex">
-                      <img src="images/snow.png" alt="weather-icon" width="46" height="46" class="weather-icon">
-                      <span>
-                        <p class="temperature">25</p>
-                      </span>
-
-                      <p class="dates">18 July</p>
-
-                      <p class="days">Thrusday</p>
-
-                    </div>
-                  </li>
-                    
-                 </ul>
-            </div>
-      
-          </section>
+        </section>
       </div>
-      
+
       <div class="content-right">
         <section>
-          <div class="card card-lg ">
+          <div class="card card-lg">
             <div class="card-body">
               <h2 class="card-title">Today's Highlights</h2>
-      
 
-              <div id="small-cards"  class="d-flex flex-wrap flex-lg-nowrap justify-content-between">
+              <div
+                id="small-cards"
+                class="d-flex flex-wrap flex-lg-nowrap justify-content-between"
+              >
                 <div class="card card-sm mb-3" id="air" style="width: 580px">
                   <div class="card-body">
                     <div class="d-flex flex-column flex-sm-column">
                       <div class="air-quality">
                         <h4 class="air-title">Air Quality Index</h4>
-                        <button class="good api-1">Good</button>  
+                        <button class="good api-1">Good</button>
                       </div>
                       <div class="air d-flex flex-column flex-md-row">
-                        <img src="images/wind.png" alt="air" width="46px" height="46px" class="justify-content-center"/>
+                        <img
+                          src="images/wind.png"
+                          alt="air"
+                          width="46px"
+                          height="46px"
+                          class="justify-content-center"
+                        />
                         <ul class="ms-3">
                           <li>
                             <p class="air-scale">SO<sub>2</sub></p>
@@ -183,16 +239,24 @@
                     </div>
                   </div>
                 </div>
-        
-                <div class="card card-sm mb-3" style="width: 580px;">
+
+                <div class="card card-sm mb-3" style="width: 580px">
                   <div class="card-body" id="time-change">
                     <div class="sunrise-sunset">
                       <h3 class="sunset-title">Sunrise & Sunset</h3>
                     </div>
-                    <div class="sun-times d-flex align-items-center flex-column flex-sm-row">
+                    <div
+                      class="sun-times d-flex align-items-center flex-column flex-sm-row"
+                    >
                       <ul class="list-unstyled me-3">
                         <li class="d-flex align-items-center">
-                          <img src="images/sun .png" alt="sun" width="56px" height="56px" class="me-2">
+                          <img
+                            src="images/sun .png"
+                            alt="sun"
+                            width="56px"
+                            height="56px"
+                            class="me-2"
+                          />
                           <div>
                             <div class="set">Sunrise</div>
                             <div class="time">6:30 AM</div>
@@ -201,7 +265,13 @@
                       </ul>
                       <ul class="list-unstyled me-3">
                         <li class="d-flex align-items-center">
-                          <img src="images/moon.png" alt="moon" width="56px" height="56px" class="me-2">
+                          <img
+                            src="images/moon.png"
+                            alt="moon"
+                            width="56px"
+                            height="56px"
+                            class="me-2"
+                          />
                           <div>
                             <div class="set">Sunset</div>
                             <div class="time">6:44 PM</div>
@@ -212,172 +282,245 @@
                   </div>
                 </div>
               </div>
-      
-              <div id="small-cards" class="d-flex flex-wrap flex-lg-nowrap justify-content-md-center justify-content-lg-between mt-4">
-                <div class="card card-sm mb-3" style="width: 260px;">
+
+              <div
+                id="small-cards"
+                class="d-flex flex-wrap flex-lg-nowrap justify-content-md-center justify-content-lg-between mt-4"
+              >
+                <div class="card card-sm mb-3" style="width: 260px">
                   <div class="card-body">
                     <div class="updates">
                       <h3 class="updates-title" id="HumidityVal">Humidity</h3>
                     </div>
                     <div class="updates-value d-flex align-items-center">
-                      <span><i class="fa-solid fa-droplet" id="icons"></i></span>
-                      <div class="updates-nmr">82 <sub style="bottom: -0.1em;">%</sub></div>
+                      <span
+                        ><i class="fa-solid fa-droplet" id="icons"></i
+                      ></span>
+                      <div class="updates-nmr">
+                        82 <sub style="bottom: -0.1em">%</sub>
+                      </div>
                     </div>
                   </div>
                 </div>
-      
-                <div class="card card-sm mb-3" style="width: 260px;">
+
+                <div class="card card-sm mb-3" style="width: 260px">
                   <div class="card-body">
                     <div class="updates">
                       <h3 class="updates-title" id="PressureVal">Pressure</h3>
                     </div>
                     <div class="updates-value d-flex align-items-center">
-                      <span><i class="fas fa-tachometer-alt" id="icons"></i></span>
+                      <span
+                        ><i class="fas fa-tachometer-alt" id="icons"></i
+                      ></span>
                       <div class="updates-nmr mr-4">1025 hPa</div>
                     </div>
                   </div>
                 </div>
-      
-                <div class="card card-sm mb-3" style="width: 260px;">
+
+                <div class="card card-sm mb-3" style="width: 260px">
                   <div class="card-body">
                     <div class="updates">
-                      <h3 class="updates-title" id="VisibilityVal">Visibility</h3>
+                      <h3 class="updates-title" id="VisibilityVal">
+                        Visibility
+                      </h3>
                     </div>
                     <div class="updates-value d-flex align-items-center">
-                        <span><i class="fa-solid fa-eye" id="icons"></i></span> 
+                      <span><i class="fa-solid fa-eye" id="icons"></i></span>
                       <div class="updates-nmr">10 km</div>
                     </div>
                   </div>
                 </div>
-      
-                <div class="card card-sm mb-3" style="width: 260px;">
+
+                <div class="card card-sm mb-3" style="width: 260px">
                   <div class="card-body">
                     <div class="updates">
                       <h3 class="updates-title" id="FeelsVal">Feels Like</h3>
                     </div>
                     <div class="updates-value d-flex align-items-center">
-                        <span><i class="fa-solid fa-temperature-high" id="icons"></i></span>
+                      <span
+                        ><i class="fa-solid fa-temperature-high" id="icons"></i
+                      ></span>
                       <div class="updates-nmr">2<sup>°C</sup></div>
                     </div>
                   </div>
                 </div>
               </div>
-      
             </div>
           </div>
-          
         </section>
 
-        <div id="today-at" class="Today">
-          Today at
-        </div>
+        <div id="today-at" class="Today">Today at</div>
 
-        <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center" id="days">
-          <div class="card card-sm align-items-center justify-content-between p-0 mx-2" id="card-box" style="width: 150px; height: 200px;">
+        <div
+          class="d-flex flex-wrap flex-lg-nowrap justify-content-center"
+          id="days"
+        >
+          <div
+            class="card card-sm align-items-center justify-content-between p-0 mx-2"
+            id="card-box"
+            style="width: 150px; height: 200px"
+          >
             <div class="card-body">
               <ul class="list-unstyled text-center">
                 <li class="times-days">9 PM</li>
                 <li class="img-days">
-                  <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
+                  <img
+                    src="images/clouds.png"
+                    alt="clouds"
+                    width="78px"
+                    height="70px"
+                  />
                 </li>
                 <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
-        
-          <div class="card card-sm align-items-center justify-content-between p-0 mx-2" style="width: 150px; height: 200px;">
+
+          <div
+            class="card card-sm align-items-center justify-content-between p-0 mx-2"
+            style="width: 150px; height: 200px"
+          >
             <div class="card-body">
               <ul class="list-unstyled text-center">
                 <li class="times-days">9 PM</li>
                 <li class="img-days">
-                  <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
+                  <img
+                    src="images/clouds.png"
+                    alt="clouds"
+                    width="78px"
+                    height="70px"
+                  />
                 </li>
                 <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
-        
-          <div class="card card-sm align-items-center justify-content-between p-0 mx-2" style="width: 150px; height: 200px;">
+
+          <div
+            class="card card-sm align-items-center justify-content-between p-0 mx-2"
+            style="width: 150px; height: 200px"
+          >
             <div class="card-body">
               <ul class="list-unstyled text-center">
                 <li class="times-days">9 PM</li>
                 <li class="img-days">
-                  <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
+                  <img
+                    src="images/clouds.png"
+                    alt="clouds"
+                    width="78px"
+                    height="70px"
+                  />
                 </li>
                 <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
-        
-          <div class="card card-sm align-items-center justify-content-between p-0 mx-2" style="width: 150px; height: 200px;">
+
+          <div
+            class="card card-sm align-items-center justify-content-between p-0 mx-2"
+            style="width: 150px; height: 200px"
+          >
             <div class="card-body">
               <ul class="list-unstyled text-center">
                 <li class="times-days">9 PM</li>
                 <li class="img-days">
-                  <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
+                  <img
+                    src="images/clouds.png"
+                    alt="clouds"
+                    width="78px"
+                    height="70px"
+                  />
                 </li>
                 <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
-        
-          <div class="card card-sm align-items-center justify-content-between p-0 mx-2" style="width: 150px; height: 200px;">
+
+          <div
+            class="card card-sm align-items-center justify-content-between p-0 mx-2"
+            style="width: 150px; height: 200px"
+          >
             <div class="card-body">
               <ul class="list-unstyled text-center">
                 <li class="times-days">9 PM</li>
                 <li class="img-days">
-                  <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
+                  <img
+                    src="images/clouds.png"
+                    alt="clouds"
+                    width="78px"
+                    height="70px"
+                  />
                 </li>
                 <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
-        
-          <div class="card card-sm align-items-center justify-content-between p-0 mx-2" style="width: 150px; height: 200px;">
+
+          <div
+            class="card card-sm align-items-center justify-content-between p-0 mx-2"
+            style="width: 150px; height: 200px"
+          >
             <div class="card-body">
               <ul class="list-unstyled text-center">
                 <li class="times-days">9 PM</li>
                 <li class="img-days">
-                  <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
+                  <img
+                    src="images/clouds.png"
+                    alt="clouds"
+                    width="78px"
+                    height="70px"
+                  />
                 </li>
                 <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
-        
-          <div class="card card-sm align-items-center justify-content-between p-0 mx-2" style="width: 150px; height: 200px;">
+
+          <div
+            class="card card-sm align-items-center justify-content-between p-0 mx-2"
+            style="width: 150px; height: 200px"
+          >
             <div class="card-body">
               <ul class="list-unstyled text-center">
                 <li class="times-days">9 PM</li>
                 <li class="img-days">
-                  <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
+                  <img
+                    src="images/clouds.png"
+                    alt="clouds"
+                    width="78px"
+                    height="70px"
+                  />
                 </li>
                 <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
-        
-          <div class="card card-sm align-items-center justify-content-between p-0 mx-2" style="width: 150px; height: 200px;">
+
+          <div
+            class="card card-sm align-items-center justify-content-between p-0 mx-2"
+            style="width: 150px; height: 200px"
+          >
             <div class="card-body">
               <ul class="list-unstyled text-center">
                 <li class="times-days">9 PM</li>
                 <li class="img-days">
-                  <img src="images/clouds.png" alt="clouds" width="78px" height="70px">
+                  <img
+                    src="images/clouds.png"
+                    alt="clouds"
+                    width="78px"
+                    height="70px"
+                  />
                 </li>
                 <li class="cel-days">5&deg;C</li>
               </ul>
             </div>
           </div>
-          
         </div>
       </div>
+    </main>
 
-  </main>
-
-
-
-  <script src="https://momentjs.com/downloads/moment.min.js"></script>
-  <script src="bootstrap.bundle.js"></script>
-  <script src="main.js"></script>
-</body>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
