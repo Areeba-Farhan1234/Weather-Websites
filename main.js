@@ -5,7 +5,7 @@ let apiKey = '3beea88fd75d88a6059e4eaf7f7df31f';
 let currentWeatherCard = document.querySelector('.content-left .card');
 let fiveDaysForecastCard = document.getElementById('forecast-day');
 let apiCard = document.querySelector('.content-right .card');
-let sunriseCard = document.querySelector('.content-right .card');
+let sunriseCard = document.getElementById('time-change');
 humidityVal = document.getElementById('humidityVal'),
 pressureVal = document.getElementById('pressureVal'),
 visibilityVal = document.getElementById('visibilityVal'),
@@ -33,7 +33,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
                                         <div class="d-flex flex-column flex-sm-column">
                                             <div class="air-quality">
                                                 <h4 class="air-title">Air Quality Index</h4>
-                                                <button class="good api-${data.list[0].main.api}"> ${apiList[data.list[0].main.api - 1]} </button>  
+                                                <button class="good api-1 ${data.list[0].main.api}"> ${apiList[data.list[0].main.api - 1]} </button>  
                                             </div>
                                             <div class="air d-flex flex-column flex-sm-row">
                                                 <img src="images/wind.png" alt="air" width="46px" height="46px" class="justify-content-center"/>
@@ -97,8 +97,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
         sunRiseTime = moment.utc(sunrise, 'X').add(timezonne, 'seconds').format('hh:mm A'),
         sunSetTime = moment.utc(sunset, 'X').add(timezonne, 'seconds').format('hh:mm A');
         sunriseCard.innerHTML = `
-            <div class="card card-sm mb-3" style="width: 580px;">
-                  <div class="card-body">
+                     <div class="card-body">
                     <div class="sunrise-sunset">
                       <h3 class="sunset-title">Sunrise & Sunset</h3>
                     </div>
@@ -112,7 +111,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
                           </div>
                         </li>
                       </ul>
-                      <ul class="list-unstyled">
+                      <ul class="list-unstyled me-3">
                         <li class="d-flex align-items-center">
                           <img src="images/moon.png" alt="moon" width="56px" height="56px" class="me-2">
                           <div>
@@ -122,8 +121,8 @@ function getWeatherDetails(name, lat, lon, country, state) {
                         </li>
                       </ul>
                     </div>
-                </div>
-            </div>
+                  </div>
+
         `;
         humidityVal.innerHTML = `${humidity}%`;
         pressureVal.innerHTML = `${pressure} hPa`;
@@ -168,7 +167,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
             let date = new Date(fiveDaysForecast[i].dt_txt);
             fiveDaysForecastCard.innerHTML += `
                 <ul class="list" id="forecast-day">
-                  <li class="items">
+                  <li class="items ml-0">
                       <div class="icons-wrapper d-flex">
                           <img src="http://openweathermap.org/img/wn/${fiveDaysForecast[i].weather[0].icon}@2x.png" alt="weather-icon" width="46" height="46" class="weather-icon">
                           <span>
