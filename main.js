@@ -166,7 +166,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
         for (let i = 0; i < fiveDaysForecast.length; i++) {
             let date = new Date(fiveDaysForecast[i].dt_txt);
             fiveDaysForecastCard.innerHTML += `
-                <ul class="list" id="forecast-day">
+                <ul class="list p-0" id="forecast-day">
                   <li class="items ml-0">
                       <div class="icons-wrapper d-flex">
                           <img src="http://openweathermap.org/img/wn/${fiveDaysForecast[i].weather[0].icon}@2x.png" alt="weather-icon" width="46" height="46" class="weather-icon">
