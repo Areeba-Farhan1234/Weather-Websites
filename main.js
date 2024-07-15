@@ -33,7 +33,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
                                         <div class="d-flex flex-column flex-sm-column">
                                             <div class="air-quality">
                                                 <h4 class="air-title">Air Quality Index</h4>
-                                                <button class="good api-1 ${data.list[0].main.api}"> ${apiList[data.list[0].main.api - 1]} </button>  
+                                                <button class="good ai-1 ${data.list[0].main.api}"> ${apiList[data.list[0].main.api - 1]} </button>  
                                             </div>
                                             <div class="air d-flex flex-column flex-sm-row">
                                                 <img src="images/wind.png" alt="air" width="46px" height="46px" class="justify-content-center"/>
@@ -189,7 +189,7 @@ function getCityCoordinates() {
     let cityName = cityInput.value.trim();
     cityInput.value = '';
     if (!cityName) return;
-    let GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
+    let GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=&appid=${apiKey}`;
     fetch(GEOCODING_API_URL).then(res => res.json()).then(data => {
         let { name, lat, lon, country, state } = data[0];
         getWeatherDetails(name, lat, lon, country, state);
