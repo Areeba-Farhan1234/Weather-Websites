@@ -4,15 +4,18 @@ let searchBtn = document.getElementById('searchBtn');
 let apiKey = '3beea88fd75d88a6059e4eaf7f7df31f';
 let currentWeatherCard = document.querySelector('.content-left .card');
 let fiveDaysForecastCard = document.getElementById('forecast-day');
-let apiCard = document.querySelector('.content-right .card');
+//let apiCard = document.querySelector('.content-right .card');
+
+let apiCard = document.getElementById('air');
 let sunriseCard = document.getElementById('time-change');
-humidityVal = document.getElementById('humidityVal'),
-pressureVal = document.getElementById('pressureVal'),
-visibilityVal = document.getElementById('visibilityVal'),
+humidityVal = document.getElementById('HumidityVal'),
+pressureVal = document.getElementById('PressureVal'),
+visibilityVal = document.getElementById('VisibilityVal'),
 FeelsVal = document.getElementById('FeelsVal');
 hourlyForcastCard = document.querySelector('.content-right #card-box');
 apiList = ["Good", "Fair", "Moderate", "Poor", "VeryPoor"];
-
+let sunrise = document.getElementById('sun-rise');
+let sunset = document.getElementById('sun-set');
 
 function getWeatherDetails(name, lat, lon, country, state) {
     let FORECAST_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
@@ -26,41 +29,42 @@ function getWeatherDetails(name, lat, lon, country, state) {
         let {so2, no2, pm10, nh3} = data.list[0].components;  
         apiCard.innerHTML = `
                     <div class="card-body">
-                        <h2 class="card-title">Today's Highlights</h2>
-                        <div id="small-cards" class="d-flex flex-wrap flex-lg-nowrap justify-content-between">
-                                <div class="card card-sm mb-3" style="width: 580px">
-                                    <div class="card-body">
-                                        <div class="d-flex flex-column flex-sm-column">
-                                            <div class="air-quality">
-                                                <h4 class="air-title">Air Quality Index</h4>
-                                                <button class="good ai-1 ${data.list[0].main.api}"> ${apiList[data.list[0].main.api - 1]} </button>  
-                                            </div>
-                                            <div class="air d-flex flex-column flex-sm-row">
-                                                <img src="images/wind.png" alt="air" width="46px" height="46px" class="justify-content-center"/>
-                                                <ul class="ms-3">
-                                                <li>
-                                                    <p class="air-scale">SO<sub>2</sub></p>
-                                                    <h3 class="air-nmnr">${so2}</h3>
-                                                </li>
-                                                <li>
-                                                    <p class="air-scale">SO<sub>2</sub></p>
-                                                    <h3 class="air-nmnr">${no2}</h3>
-                                                </li>
-                                                <li>
-                                                    <p class="air-scale">SO<sub>2</sub></p>
-                                                    <h3 class="air-nmnr">${pm10}</h3>
-                                                </li>
-                                                <li>
-                                                    <p class="air-scale">SO<sub>2</sub></p>
-                                                    <h3 class="air-nmnr">${nh3}</h3>
-                                                </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="d-flex flex-column flex-sm-column">
+                        <div class="air-quality">
+                            <h4 class="air-title">Air Quality Index</h4>
+                            <button class="good api-1 ${data.list[0].main.api}"> ${apiList[data.list[0].main.api - 1]} </button>
+                        </div>
+                        <div class="air d-flex flex-column flex-md-row">
+                            <img
+                            src="images/wind.png"
+                            alt="air"
+                            width="46px"
+                            height="46px"
+                            class="justify-content-center"
+                            />
+                            <ul class="ms-3">
+                            <li class="mr-2">
+                                <p class="air-scale">SO<sub>2</sub></p>
+                                <h3 class="air-nmnr">${so2}</h3>
+                            </li>
+                            <li class="mr-2">
+                                <p class="air-scale">SO<sub>2</sub></p>
+                                <h3 class="air-nmnr">${no2}</h3>
+                            </li>
+                            <li class="mr-2">
+                                <p class="air-scale">SO<sub>2</sub></p>
+                                <h3 class="air-nmnr">${pm10}</h3>
+                            </li>
+                            <li class="mr-2">
+                                <p class="air-scale">SO<sub>2</sub></p>
+                                <h3 class="air-nmnr">${nh3}</h3>
+                            </li>
+                            </ul>
+                        </div>
                         </div>
                     </div>
+       
+                            
         `;
     }).catch(() => {
         alert(`Failed to fetch Quality Index`);
@@ -72,7 +76,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
         currentWeatherCard.innerHTML = `
             <div class="card-body p-0">
                 <h2 class="card-title">Now</h2>
-                <div class="weapper">
+                <div class="wrapper">
                     <div class="heading">${(data.main.temp - 273.15).toFixed(2)}&deg;<sup>c</sup></div>
                     <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather-icon" width="74" height="74" class="weather-icon">
                 </div>
@@ -81,57 +85,60 @@ function getWeatherDetails(name, lat, lon, country, state) {
                 <ul class="list">
                     <li class="items">
                         <span><i class="fa-solid fa-calendar"></i></span>
-                        <div class="calender">${days[date.getDay()]}, ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}</div>
+                        <div class="calendar">${days[date.getDay()]}, ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}</div>
                     </li>
                     <li class="items">
                         <span><i class="fa-solid fa-location-dot"></i></span>
-                        <div class="location" id="location">${name}, ${country}</div>
-                        <span></span>
+                        <div class="location" id="location">${data.name}, ${data.sys.country}</div>
                     </li>
                 </ul>
             </div>
         `;
-        let [sunrise , sunset] = data.sys,
-        {timezonne, visibility} = data,
-        {humidity, pressure, Feels} = data.main,
-        sunRiseTime = moment.utc(sunrise, 'X').add(timezonne, 'seconds').format('hh:mm A'),
-        sunSetTime = moment.utc(sunset, 'X').add(timezonne, 'seconds').format('hh:mm A');
-        sunriseCard.innerHTML = `
-                     <div class="card-body">
-                    <div class="sunrise-sunset">
-                      <h3 class="sunset-title">Sunrise & Sunset</h3>
-                    </div>
-                    <div class="sun-times d-flex align-items-center flex-column flex-sm-row">
-                      <ul class="list-unstyled me-3">
-                        <li class="d-flex align-items-center">
-                          <img src="images/sun .png" alt="sun" width="56px" height="56px" class="me-2">
-                          <div>
-                            <div class="set">Sunrise</div>
-                            <div class="time">${sunRiseTime}</div>
-                          </div>
+    
+        let { sunrise, sunset } = data.sys;
+        let { timezone, visibility } = data;
+        let { humidity, pressure, feels_like } = data.main;
+    
+        let sunRiseTime = moment.utc(sunrise, 'X').add(timezone, 'seconds').format('hh:mm A');
+        let sunSetTime = moment.utc(sunset, 'X').add(timezone, 'seconds').format('hh:mm A');
+        console.log(sunriseCard)
+         sunriseCard.innerHTML = `
+                <div class="sunrise-sunset">
+                    <h3 class="sunset-title">Sunrise & Sunset</h3>
+                </div>
+                <div class="sun-times d-flex align-items-center flex-column flex-sm-row">
+                    <ul class="list-unstyled me-3">
+                        <li class="d-flex align-items-center mr-1">
+                            <img src="images/sun .png" alt="sun" width="56px" height="56px" class="me-2">
+                            <div>
+                                <div class="set">Sunrise</div>
+                                <div class="time">${sunRiseTime}</div>
+                            </div>
                         </li>
-                      </ul>
-                      <ul class="list-unstyled me-3">
-                        <li class="d-flex align-items-center">
-                          <img src="images/moon.png" alt="moon" width="56px" height="56px" class="me-2">
-                          <div>
-                            <div class="set">Sunset</div>
-                            <div class="time">${sunSetTime}</div>
-                          </div>
+                    </ul>
+                    <ul class="list-unstyled me-3">
+                        <li class="d-flex align-items-center m-0">
+                            <img src="images/moon.png" alt="moon" width="56px" height="56px" class="me-2">
+                            <div>
+                                <div class="set">Sunset</div>
+                                <div class="time">${sunSetTime}</div>
+                            </div>
                         </li>
-                      </ul>
-                    </div>
-                  </div>
+                    </ul>
+                </div>
+ 
+        `; 
 
-        `;
         humidityVal.innerHTML = `${humidity}%`;
         pressureVal.innerHTML = `${pressure} hPa`;
-        visibilityVal.innerHTML = `${visibility / 1000}km`;
-        FeelsVal.innerHTML = `${(Feels - 273.15).toFixed(2)}&deg;C`;
-
-    }).catch(() => {
-        alert(`Failed to fetch current weather`);
-    }),
+        visibilityVal.innerHTML = `${visibility / 1000} km`;
+        FeelsVal.innerHTML = `${(feels_like - 273.15).toFixed(2)}&deg;C`;
+    
+    }).catch((error) => {
+        console.error('Failed to fetch current weather', error);
+        // Optionally alert the user or handle the error appropriately
+    });
+    
 
     fetch(FORECAST_API_URL).then(res => res.json()).then(data => {
         let hourlyForcast = data.list;
@@ -189,7 +196,7 @@ function getCityCoordinates() {
     let cityName = cityInput.value.trim();
     cityInput.value = '';
     if (!cityName) return;
-    let GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=&appid=${apiKey}`;
+    let GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
     fetch(GEOCODING_API_URL).then(res => res.json()).then(data => {
         let { name, lat, lon, country, state } = data[0];
         getWeatherDetails(name, lat, lon, country, state);
