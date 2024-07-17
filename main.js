@@ -151,7 +151,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
             if(hr == 0) hr = 12;
             if(hr > 12) hr = hr - 12;
             hourlyForcastCard.innerHTML += `
-                <div class="card card-sm align-items-center justify-content-between p-0 mx-2"="width: 150px; height: 200px">
+                 <div class="card card-sm align-items-center justify-content-between p-0 mx-2" style="width: 150px; height: 200px" >
                     <div class="card-body py-4">
                         <ul class="list-unstyled text-center">
                             <li class="times-days">
@@ -166,6 +166,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
                         </ul>
                     </div>
                 </div>
+             
             `;
         }
         let uniqueForecastDays = [];
