@@ -181,10 +181,10 @@ function getWeatherDetails(name, lat, lon, country, state) {
             fiveDaysForecastCard.innerHTML += `
                 <ul class="list p-0" id="forecast-day">
                   <li class="items ml-0">
-                      <div class="icons-weapper d-flex">
+                      <div class="icons-wrapper d-flex">
                           <img src="http://openweathermap.org/img/wn/${fiveDaysForecast[i].weather[0].icon}@2x.png" alt="weather-icon" width="46" height="46" class="weather-icon">
                           <span>
-                              <p class="temperature" {style="font-size: 1.5rem"}>${(fiveDaysForecast[i].main.temp - 273.15).toFixed(2)}&deg;<sup>c</sup></p>
+                              <p class="temperature" {style="font-size: 1.2rem"}>${(fiveDaysForecast[i].main.temp - 273.15).toFixed(2)}&deg;<sup>c</sup></p>
                           </span>
                           <p class="dates">${date.getDate()} ${months[date.getMonth()]}</p>
                           <p class="days">${days[date.getDay()]}</p>
