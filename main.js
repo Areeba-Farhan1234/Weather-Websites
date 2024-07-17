@@ -12,7 +12,7 @@ humidityVal = document.getElementById('HumidityVal'),
 pressureVal = document.getElementById('PressureVal'),
 visibilityVal = document.getElementById('VisibilityVal'),
 FeelsVal = document.getElementById('FeelsVal');
-hourlyForcastCard = document.querySelector('.content-right #card-box');
+hourlyForcastCard = document.querySelector('.content-right #days');
 apiList = ["Good", "Fair", "Moderate", "Poor", "VeryPoor"];
 let sunrise = document.getElementById('sun-rise');
 let sunset = document.getElementById('sun-set');
@@ -43,20 +43,20 @@ function getWeatherDetails(name, lat, lon, country, state) {
                             class="justify-content-center"
                             />
                             <ul class="ms-3">
-                            <li class="mr-2">
+                            <li>
                                 <p class="air-scale">SO<sub>2</sub></p>
                                 <h3 class="air-nmnr">${so2}</h3>
                             </li>
-                            <li class="mr-2">
-                                <p class="air-scale">SO<sub>2</sub></p>
+                            <li>
+                                <p class="air-scale">NO<sub>2</sub></p>
                                 <h3 class="air-nmnr">${no2}</h3>
                             </li>
-                            <li class="mr-2">
-                                <p class="air-scale">SO<sub>2</sub></p>
+                            <li>
+                                <p class="air-scale">PM<sub>10</sub></p>
                                 <h3 class="air-nmnr">${pm10}</h3>
                             </li>
-                            <li class="mr-2">
-                                <p class="air-scale">SO<sub>2</sub></p>
+                            <li>
+                                <p class="air-scale">NH<sub>3</sub></p>
                                 <h3 class="air-nmnr">${nh3}</h3>
                             </li>
                             </ul>
@@ -76,7 +76,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
         currentWeatherCard.innerHTML = `
             <div class="card-body p-0">
                 <h2 class="card-title">Now</h2>
-                <div class="wrapper">
+                <div class="weapper">
                     <div class="heading">${(data.main.temp - 273.15).toFixed(2)}&deg;<sup>c</sup></div>
                     <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="weather-icon" width="74" height="74" class="weather-icon">
                 </div>
@@ -101,7 +101,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
     
         let sunRiseTime = moment.utc(sunrise, 'X').add(timezone, 'seconds').format('hh:mm A');
         let sunSetTime = moment.utc(sunset, 'X').add(timezone, 'seconds').format('hh:mm A');
-        console.log(sunriseCard)
+        // console.log(sunriseCard)
          sunriseCard.innerHTML = `
                 <div class="sunrise-sunset">
                     <h3 class="sunset-title">Sunrise & Sunset</h3>
@@ -150,16 +150,22 @@ function getWeatherDetails(name, lat, lon, country, state) {
             if(hr < 12) a = 'AM';
             if(hr == 0) hr = 12;
             if(hr > 12) hr = hr - 12;
-            hourlyForcastCard.innerHTML = `
-                    <div class="card-body">
+            hourlyForcastCard.innerHTML += `
+                <div class="card card-sm align-items-center justify-content-between p-0 mx-2"="width: 150px; height: 200px">
+                    <div class="card-body py-4">
                         <ul class="list-unstyled text-center">
-                            <li class="times-days">${hr} ${a}</li>
+                            <li class="times-days">
+                                ${hr} ${a}
+                            </li>
                             <li class="img-days">
                                 <img src="https://openweathermap.org/img/wn/${hourlyForcast[i].weather[0].icon}@2x.png" alt="clouds" width="78px" height="70px"/>
                             </li>
-                            <li class="cel-days">${(hourlyForcast[i].main.temp - 273.15).toFixed(2)}&deg;C</li>
+                            <li class="cel-days">
+                                ${(hourlyForcast[i].main.temp - 273.15).toFixed(2)}&deg;C
+                            </li>
                         </ul>
                     </div>
+                </div>
             `;
         }
         let uniqueForecastDays = [];
