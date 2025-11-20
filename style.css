@@ -385,12 +385,14 @@ main {
   margin-left: 20px;
 }
 
-.content-right span #today-at {
-    color: #E3FEF7;
-    background: #003C43;
-    font-size: 18px;
-    font-weight: 700;
-    margin-left: 40px;
+.content-right #today-at {
+  color: #E3FEF7;
+  background: #003C43;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 40px;
+  padding: 6px 14px;
+  border-radius: 8px;
 }
 
 .content-right #days {
