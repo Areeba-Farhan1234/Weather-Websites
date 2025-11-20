@@ -8,6 +8,7 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   background-color: #003C43;
+  overflow-x: hidden;
 }
 
 /* Header */
