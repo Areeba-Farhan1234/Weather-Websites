@@ -11,7 +11,9 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   background-color: #003C43;
-  overflow: hidden; /* hide both x and y scrollbars */
+ overflow-x: hidden;
+overflow-y: auto;
+
   width: 100vw;
   height: 100vh;
 }
@@ -28,6 +30,12 @@ section {
   background-color: #135D66;
   margin: 40px;
   border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin: 10px; 
+  }
 }
 
 /* For your nav, cards, and content, make sure width is relative */
@@ -409,7 +417,7 @@ main {
     justify-content: space-between;
   }
   .content-right .card .card-sm{
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   .content-right .card .card-sm #air {
