@@ -5,10 +5,15 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   background-color: #003C43;
-  overflow-x: hidden;
+  overflow: hidden; /* hide both x and y scrollbars */
+  width: 100vw;
+  height: 100vh;
 }
 
 /* Header */
@@ -17,10 +22,19 @@ header {
 }
 
 section {
+   max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
   background-color: #135D66;
   margin: 40px;
   border-radius: 50px;
 }
+
+/* For your nav, cards, and content, make sure width is relative */
+.content-left, .content-right, .card, .card-sm {
+  max-width: 100%;
+}
+
 
 .navbar .navbar-brand .logo {
   border-radius: 100%;
